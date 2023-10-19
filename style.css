@@ -1,7 +1,29 @@
+@font-face {
+  font-family: Roboto;
+  src: local('Roboto'), url('./fonts/Roboto-Regular.ttf'), format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: local('Roboto'), url('./fonts/Roboto-Medium.ttf'), format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: local('Roboto'), url('./fonts/Roboto-Bold.ttf'), format('truetype');
+  font-weight: 700;
+}
+
 :root {
   --sky-blue: #0ea5e9;
   --pale-blue: #f0f9ff;
   --vivid-yellow: #eab308;
+
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.1;
 }
 
 * {
@@ -26,7 +48,50 @@ body {
 
 .aside {
   grid-area: aside;
+  display: grid;
+  grid-auto-rows: min-content;
+  gap: 3rem;
+  padding: 16px;
   background: var(--sky-blue);
+}
+
+.logo,
+.link {
+  display: inline-grid;
+  grid-template-columns: repeat(2, min-content);
+  align-items: center;
+}
+
+.logo {
+  gap: 0.5rem;
+  color: white;
+  font-size: 1.7rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.logo__icon {
+  width: 3rem;
+  fill: white;
+}
+
+.nav__list {
+  display: grid;
+  gap: 1.25rem;
+  list-style: none;
+}
+
+.link__icon {
+  width: 1.5rem;
+  fill: white;
+}
+
+.nav__link {
+  gap: 1.4rem;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-decoration: none;
 }
 
 .header {
