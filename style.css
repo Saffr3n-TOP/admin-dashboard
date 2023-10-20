@@ -213,7 +213,7 @@ body {
 .footer {
   grid-area: footer;
   padding: 4px 0;
-  border-top: 1px solid #bbd;
+  border-top: 1px solid #aac;
   background: linear-gradient(
     to right,
     var(--pale-blue),
