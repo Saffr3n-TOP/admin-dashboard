@@ -39,7 +39,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr 5fr;
-  grid-template-rows: 1fr 5fr;
+  grid-template-rows: auto 1fr;
   grid-template-areas:
     'aside header'
     'aside main';
