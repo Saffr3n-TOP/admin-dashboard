@@ -18,7 +18,7 @@
 
 :root {
   --sky-blue: #0ea5e9;
-  --pale-blue: #f0f9ff;
+  --pale-blue: #ddf;
   --vivid-yellow: #eab308;
 
   font-family: Roboto, sans-serif;
@@ -100,9 +100,107 @@ body {
 
 .header {
   grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: repeat(2, auto);
+  align-items: center;
+  gap: 12px 24px;
+  padding: 12px 32px;
+}
+
+.search-bar {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 12px;
+}
+
+.input {
+  padding: 4px 8px;
+  border: none;
+  border-radius: 16px;
+  background: var(--pale-blue);
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.button_generic {
+  width: 6rem;
+  padding: 8px 0;
+  border: none;
+  border-radius: 16px;
+  background: var(--sky-blue);
+  color: white;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 500;
+}
+
+.button_svg {
+  border: none;
+  background: none;
+}
+
+.button__icon {
+  display: block;
+  width: 1.5rem;
+}
+
+.user-bar {
+  justify-self: end;
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  align-items: center;
+  gap: 24px;
+}
+
+.avatar_small {
+  width: 40px;
+}
+
+.avatar_big {
+  width: 64px;
+}
+
+.text {
+  display: block;
+}
+
+.text_medium {
+  font-weight: 500;
+}
+
+.text_bold {
+  font-weight: bold;
+}
+
+.text_small {
+  font-size: 0.9rem;
+}
+
+.text_big {
+  font-size: 1.7rem;
+}
+
+.greeting {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  align-items: center;
+  gap: 12px;
+}
+
+.header__buttons {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 24px;
 }
 
 .main {
   grid-area: main;
+  box-shadow: 0 4px 4px 0 #bbd inset;
   background: var(--pale-blue);
 }
